@@ -1,0 +1,47 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button>
+            <h4 class="modal-title">Adicionar Informações do E-mail Marketing</h4>
+        </div>
+        <form action="" enctype="multipart/form-data" method="post">
+            <input name="form" type="hidden" value="adicionar-info-mail-mkt"/>
+            <input name="elemento" type="hidden" value="[ELEMENTO_ID]"/>
+
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Opçoes de Assunto:</label>
+                    <textarea class="form-control" name="assunto" spellcheck="true">[ELEMENTO_ASSUNTO]</textarea>
+                </div>
+
+                <!--
+                    <div class="form-group">
+                        <label>Opçoes de Assunto:</label>
+                        <textarea name="textoApoio" class="form-control"/>[ELEMENTO_TEXTOAPOIO]</textarea>
+                    </div>
+                -->
+
+                <div class="form-group">
+                    <label>Conteúdo do e-mail:</label>
+                    <textarea class="form-control trumbowyg" name="conteudo" spellcheck="true" style="height:120px;">[ELEMENTO_CONTEUDO]</textarea>
+                </div>
+
+            </div>
+            <div class="modal-footer clearfix">
+                <button class="btn btn-danger btn-flat border-0 pull-left" data-dismiss="modal" type="button"><i
+                        class="fa fa-times"></i> Cancelar
+                </button>
+                <button class="btn btn-primary btn-flat border-0" type="submit"><i class="fa fa-save"></i> Salvar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $('.trumbowyg').trumbowyg();
+
+    $("input[type='checkbox']:not(.simple), input[type='radio']:not(.simple)").iCheck({
+        checkboxClass: "icheckbox_minimal", radioClass: "iradio_minimal"
+    });
+</script>

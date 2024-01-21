@@ -1,0 +1,12 @@
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+/public_html/backoffice/uploads
+/public_html/backoffice/extras/
+/public_html/backoffice/pop/uploads/
+/ignored/

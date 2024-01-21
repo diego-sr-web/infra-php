@@ -1,0 +1,56 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button>
+            <h4 class="modal-title">Editar Tipo de Projeto "[NOME_PROJETOTIPO]"</h4>
+        </div>
+        <form action="" method="post">
+            <input name="form" type="hidden" value="editar-tipoProjeto"/>
+            <input name="projetoTipo" type="hidden" value="[ID_PROJETOTIPO]"/>
+
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Nome do Tipo de Projeto</label>
+                    <input class="form-control" name="nome" title="Nome do Tipo de Projeto" type="text"
+                           value="[NOME_PROJETOTIPO]"/>
+                </div>
+                <div class="form-group">
+                    <label>Descrição</label>
+                    <textarea class="form-control" name="descricao" title="Descrição">[DESCRICAO_PROJETOTIPO]</textarea>
+                </div>
+                <div class="form-group">
+                    <label>Cor</label>
+                    <div class="input-group demo2">
+                        <input class="form-control" name="cor" type="text" value="[COR_PROJETOTIPO]"/>
+                        <span class="input-group-addon"><i></i></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Ícone (formato "fa-icone" - <a href="http://fortawesome.github.io/Font-Awesome/icons/"
+                                                          target="_blank">ver
+                        aqui</a>)</label>
+                    <input class="form-control" name="icone" title="Ícone" type="text" value="[ICONE_PROJETOTIPO]"/>
+                </div>
+            </div>
+            <div class="modal-footer clearfix">
+                <button class="btn btn-danger btn-flat border-0 pull-left" data-dismiss="modal" type="button"><i
+                        class="fa fa-times"></i> Cancelar
+                </button>
+                <button class="btn btn-primary btn-flat border-0" type="submit"><i class="fa fa-save"></i> Salvar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $('.demo2').colorpicker();
+    });
+
+    $(document).ready(function () {
+        $("input[type='checkbox']:not(.simple), input[type='radio']:not(.simple)").iCheck({
+            checkboxClass: "icheckbox_minimal", radioClass: "iradio_minimal"
+        })
+    });
+</script>

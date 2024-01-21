@@ -1,0 +1,31 @@
+.cropit-preview {
+    background-color: #f8f8f8;
+    background-size: cover;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    margin-top: 7px;
+}
+
+.cropit-image-zoom-input {
+    max-width: 300px;
+    margin: 15px 0;
+}
+
+.crop img {
+    max-width: none !important;
+}
+
+/* Show load indicator when image is being loaded */
+.cropit-preview.cropit-image-loading .spinner {
+    opacity: 1;
+}
+
+/* Show move cursor when image has been loaded */
+.cropit-preview.cropit-image-loaded .cropit-preview-image-container {
+    cursor: move;
+}
+
+/* Gray out zoom slider when the image cannot be zoomed */
+.cropit-image-zoom-input[disabled] {
+    opacity: .2;
+}

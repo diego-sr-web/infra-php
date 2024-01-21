@@ -1,0 +1,36 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button>
+            <h4 class="modal-title">Lista de Conteúdo</h4>
+        </div>
+        <form action="" enctype="multipart/form-data" method="post">
+            <input name="form" type="hidden" value="adicionar-listagem-conteudo"/>
+            <input name="elemento" type="hidden" value="[ELEMENTO_ID]"/>
+
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Conteudo</label>
+                    <textarea class="form-control trumbowyg" name="texto" spellcheck="true">[ELEMENTO_LISTAGEM_DE_CONTEUDO]</textarea>
+                </div>
+                <!--
+                <div class="form-group">
+                    <label>Observações</label>
+                    <textarea name="observacao" class="form-control" style="height:120px;"></textarea>
+                </div>
+                -->
+            </div>
+            <div class="modal-footer clearfix">
+                <button class="btn btn-danger btn-flat border-0 pull-left" data-dismiss="modal" type="button"><i
+                        class="fa fa-times"></i> Cancelar
+                </button>
+                <button class="btn btn-primary btn-flat border-0" type="submit"><i class="fa fa-save"></i> Salvar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $('.trumbowyg').trumbowyg();
+</script>

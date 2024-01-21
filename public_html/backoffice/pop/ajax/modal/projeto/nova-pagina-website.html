@@ -1,0 +1,58 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button>
+            <h4 class="modal-title">Cadastrar nova página interna</h4>
+        </div>
+        <form action="" enctype="multipart/form-data" method="post">
+            <input name="form" type="hidden" value="adicionar-pagina"/>
+            <input name="projeto" type="hidden" value="[PROJETO_ID]"/>
+            <div class="modal-body blocos-pagina">
+                <div class="bloco-pagina">
+                    <div class="js-remove-pagina bt-remove-etapa"><i class="fa fa-remove" title="Remover Página"></i>
+                    </div>
+                    <div class="form-group">
+                        <label>Nome da Página</label>
+                        <input autocomplete="off" class="form-control" name="nome[]" placeholder="Nome da Página" required
+                               spellcheck="true" type="text"/>
+                    </div>
+                    <!--
+                    <div class="form-group">
+                        <label>Descrição da Página</label>
+                        <textarea name="descricao[]" class="form-control textarea" placeholder="Descrição da Página" style="height:100px;"></textarea>
+                    </div> -->
+                    <input name="descricao[]" type="hidden" value=""/>
+                </div>
+                <button class="btn btn-primary btn-block btn-flat js-bloco-pagina btn-bloco-pagina" type="button">
+                    Adicionar nova página
+                </button>
+                <!--
+                <div class="form-group">
+                    <label>Layout</label>
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <span class="btn btn-primary btn-file btn-flat border-0">
+                                Procurar&hellip; <input type="file" class="upload-preview" name="imagem">
+                            </span>
+                        </span>
+                        <input type="text" class="form-control" disabled="disabled" readonly>
+                    </div>
+                    <p class="help-block">Max. 5MB</p>
+                    <img class="img-preview" style="width:100%; display:none;" src=""/>
+                </div>
+                <div class="form-group">
+                    <label>Observações</label>
+                    <textarea name="observacao" class="form-control" style="height:120px;"></textarea>
+                </div>
+                -->
+            </div>
+            <div class="modal-footer clearfix">
+                <button class="btn btn-danger btn-flat border-0 pull-left" data-dismiss="modal" type="button"><i
+                        class="fa fa-times"></i> Cancelar
+                </button>
+                <button class="btn btn-primary btn-flat border-0" type="submit"><i class="fa fa-save"></i> Salvar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,84 @@
+<!-- MODAL NOVO CLIENTE - FORM adicionar-cliente -->
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button>
+            <h4 class="modal-title">Cadastrar novo cliente</h4>
+        </div>
+        <form action="" class="form-crop" enctype="multipart/form-data" method="post">
+            <input name="form" type="hidden" value="adicionar-cliente"/>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Nome Fantasia*</label>
+                    <input class="form-control" name="nomeFantasia" placeholder="Nome Fantasia" type="text"/>
+                </div>
+                <div class="form-group">
+                    <label>Responsável</label>
+                    <input class="form-control" name="responsavel" placeholder="Nome do Responsável" type="text"/>
+                </div>
+                <div class="form-group">
+                    <label>Email de Contato*</label>
+                    <input class="form-control" name="email" placeholder="exemplo@exemplo.com.br" type="text"/>
+                </div>
+                <div class="form-group">
+                    <label>Informações de Contato</label>
+                    <textarea class="form-control" name="contato"
+                              placeholder="Outras informações de contato"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Data de Entrada*</label>
+                    <input class="form-control datepicker" data-date-format="yyyy-mm-dd" data-date-language="pt-BR" data-provide="datepicker"
+                           name="dataEntrada" type="text"/>
+                </div>
+                <div class="form-group">
+                    <label>ID WHMCS</label>
+                    <input class="form-control" name="whmcsId" placeholder="" type="text"/>
+                </div>
+                <div class="form-group">
+                    <label>Logo</label>
+                    <div class="crop crop-logo">
+                        <div class="cropit-preview"></div>
+                        <input class="cropit-image-zoom-input" type="range"/>
+                        <input class="cropit-image-input" name="image" type="file"/>
+                        <input class="cropit-image-data" name="image-data" type="hidden">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Observações</label>
+                    <textarea class="form-control" name="observacao"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer clearfix">
+                <button class="btn btn-danger btn-flat border-0 pull-left" data-dismiss="modal" type="button"><i
+                        class="fa fa-times"></i> Cancelar
+                </button>
+                <button class="btn btn-primary btn-flat border-0" type="submit"><i class="fa fa-save"></i> Salvar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $("#example1").dataTable();
+
+        $('.crop-logo').cropit({
+            width: 200,
+            height: 200,
+            minZoom: 'fit',
+            freeMove: true,
+            smallImage: 'allow'
+        });
+    });
+
+    $(document).on('submit', '.form-crop', function () {
+        var $crop = $(this).find('.crop-logo');
+        var imageData = $crop.cropit('export', {
+            type: 'image/png'
+        });
+        $crop.find('.cropit-image-data').val(imageData);
+
+        return true;
+    });
+</script>

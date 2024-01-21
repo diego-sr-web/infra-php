@@ -1,0 +1,110 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button>
+            <h4 class="modal-title">Apontar Tempo do Job</h4>
+        </div>
+        <form action="" enctype="multipart/form-data" method="post" id="formApontarJob">
+            <input name="form" type="hidden" value="novo-hora"/>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Titulo *</label>
+                    <input autocomplete="off" class="form-control" name="titulo" placeholder="Titulo do job" required
+                           spellcheck="true" type="text" value=""/>
+                </div>
+                <div class="form-group">
+                    <label>Cliente*</label>
+                    <select class="form-control" name="cliente" required>
+                        <option value="">-- Selecione o Cliente --</option>
+                        [CLIENTE_PEDIDO]
+                    </select>
+                </div>
+                <div class="form-group custom-radio">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <label>Área*</label>
+                        </div>
+                        [AREA_USUARIO]
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Adicionar arquivos</label>
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <span class="btn btn-primary btn-file btn-flat border-0">
+                                Procurar&hellip; <input class="upload-preview" multiple name="arquivos[]" type="file">
+                            </span>
+                        </span>
+                        <input class="form-control" disabled="disabled" readonly type="text">
+                    </div>
+                    <p class="help-block">Max. 5MB</p>
+                </div>
+
+                <div class="form-group">
+                    <label>Detalhe Seu Job</label>
+                    <textarea class="form-control trumbowyg" name="descricao" required spellcheck="true"
+                              style="height:120px;"></textarea>
+                </div>
+                <div class="form-group">
+                    <input autocomplete="off" class="form-control" name="tempo-em-minutos"
+                           placeholder="Tempo trabalhado em minutos" required type="number" value=""/>
+                    <label>*Tempo trabalhado em minutos, exemplo: 1 hora = 60 minutos</label>
+                </div>
+            </div>
+
+
+            <div class="modal-footer clearfix">
+                <button class="btn btn-danger btn-flat border-0 pull-left" data-dismiss="modal" type="button"><i
+                        class="fa fa-times"></i> Cancelar
+                </button>
+                <button class="btn btn-primary btn-flat border-0" type="submit"><i class="fa fa-save"></i> Salvar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $('.trumbowyg').trumbowyg();
+
+    $("#formApontarJob").submit(function(event){
+        event.preventDefault(); //prevent default action
+        var post_url = "http://localhost:/pop-v3/public_html/backoffice/pop/pop-processa-modal.php";
+        var request_method = $(this).attr("method"); //get form GET/POST method
+        var form_data = new FormData(this); //Creates new FormData object
+        $.ajax({
+            url: post_url,
+            type: request_method,
+            data : form_data,
+            contentType: false,
+            cache: false,
+            processData:false,
+            success: function(data){
+                if(data == 1){
+                    alert("Apontamento criado com sucesso");
+                    //Aqui faz o reload da página que contém a tabela da lista EM ESPERA do pop-minhas-tarefas
+                    $( "#tabela-em-espera" ).load( "pop-minhas-tarefas.php #tabela-em-espera" );
+                }else if(data == 2){
+                    alert("Houve algum erro ao inserir o projeto.");
+                }else if(data == 3){
+                    alert("Preencha todos os campos obrigatórios");
+                }
+                /*
+                Utilizar este aqui em todos os retornos, comentado pois o css e js não carrega no layout antigo.
+                swal({
+                    title: "Pedido Criado Com Sucesso",
+                    icon: 'success',
+                    text: response,
+                    timer: 2100,
+                    buttons: false
+                });
+
+                 */
+                $("#modal-pedido").modal("toggle");
+            },
+            error: function (request, status, error) {
+                alert(request.responseText);
+            }
+        })
+    });
+</script>

@@ -1,0 +1,132 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button>
+            <h4 class="modal-title">Criar novo pedido</h4>
+        </div>
+        <form action="" enctype="multipart/form-data" method="post" id="formNovoPedidoCliente">
+            <input name="form" type="hidden" value="novo-pedido"/>
+            <input name="override_area_de" type="hidden" value="[OVERRIDE_AREA]"/>
+            <input name="areaDe" type="hidden" value=""/>
+
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Pedido *</label>
+                    <input autocomplete="off" class="form-control" name="nome" placeholder="Pedido" required spellcheck="true"
+                           type="text" value=""/>
+                </div>
+                <div class="form-group">
+                    <label>Produto*</label>
+                    <input class="form-control" name="produto" placeholder="Produto" required spellcheck="true"
+                           type="text" value=""/>
+                </div>
+                <div class="form-group">
+                    <label>Cliente*</label>
+                    <select class="form-control" name="cliente" required>
+                        <option value="">-- Selecione o Cliente --</option>
+                        [CLIENTE_PEDIDO]
+                    </select>
+                </div>
+                <input name="geraRetorno" type="hidden" value="1"/>
+                <div class="form-group">
+                    <label>Prazo</label>
+                    <input autocomplete="off" class="form-control datepicker" data-date-end-date="" data-date-format="yyyy-mm-dd"
+                           data-date-language="pt-BR" data-date-start-date="0days" data-date-today-highlight="true"
+                           data-provide="datepicker" name="prazo" required type="text" value=""/>
+
+                </div>
+                <div class="form-group custom-radio">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <label>Prioridade*</label>
+                        </div>
+                        [PRIORIDADE_PEDIDO]
+                    </div>
+                </div>
+                <div class="form-group custom-radio">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <label>Enviar Pedido para Área*</label>
+                        </div>
+                        [AREA_PEDIDO]
+                    </div>
+                </div>
+                <div class="form-group custom-radio pessoas">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <label>Enviar para Pessoa em Específico</label>
+                        </div>
+                        <div class="radio col-xs-2">
+                            <label>
+                                <input checked="checked" class="" name="pessoaPara" type="radio" value="">
+                                <img class="avatar-responsavel" src="../uploads/usuarios/default.png" title="Em Aberto">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Adicionar arquivos</label>
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <span class="btn btn-primary btn-file btn-flat border-0">
+                                Procurar&hellip; <input class="upload-preview" multiple name="arquivos[]" type="file">
+                            </span>
+                        </span>
+                        <input class="form-control" disabled="disabled" readonly type="text">
+                    </div>
+                    <p class="help-block">Max. 5MB</p>
+                </div>
+
+                <div class="form-group">
+                    <label>Detalhe Seu Pedido</label>
+                    <textarea class="form-control" name="observacao" required spellcheck="true"
+                              style="height:120px;"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer clearfix">
+                <button class="btn btn-danger btn-flat border-0 pull-left" data-dismiss="modal" type="button"><i
+                        class="fa fa-times"></i> Cancelar
+                </button>
+                <button class="btn btn-primary btn-flat border-0" type="submit"><i class="fa fa-save"></i> Salvar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $("input[type='checkbox']:not(.simple), input[type='radio']:not(.simple)").iCheck({
+        checkboxClass: "icheckbox_minimal", radioClass: "iradio_minimal"
+    });
+
+    $("#formNovoPedido").submit(function(event){
+        event.preventDefault(); //prevent default action
+        var post_url = "http://localhost:/pop-v3/public_html/backoffice/pop/pop-processa-modal.php";
+        var request_method = $(this).attr("method"); //get form GET/POST method
+        var form_data = new FormData(this); //Creates new FormData object
+        $.ajax({
+            url: post_url,
+            type: request_method,
+            data : form_data,
+            contentType: false,
+            cache: false,
+            processData:false,
+            success: function(data){
+                alert("Pedido criado com sucesso");
+                /*
+                swal({
+                    title: "Pedido Criado Com Sucesso",
+                    icon: 'success',
+                    text: response,
+                    timer: 2100,
+                    buttons: false
+                });
+
+                 */
+            },
+            error: function (request, status, error) {
+                alert(request.responseText);
+            }
+        })
+    });
+</script>

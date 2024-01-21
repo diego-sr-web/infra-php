@@ -1,0 +1,25 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button>
+            <h4 class="modal-title">Finalizar Tarefa</h4>
+        </div>
+        <form action="" method="post">
+            <input name="form" type="hidden" value="finalizar-tarefa"/>
+            <input name="tarefa" type="hidden" value="[ID_TAREFA]"/>
+            <div class="modal-body">
+                <div class="txt-center" style="padding: 20px;">
+                    Tem certeza que deseja finalizar a tarefa <b>[NOME_TAREFA]</b> do projeto <b>[NOME_PROJETO]</b>?
+                </div>
+            </div>
+            <div class="modal-footer clearfix">
+                <button class="btn btn-danger btn-flat border-0 pull-left" data-dismiss="modal" type="button"><i
+                        class="fa fa-times"></i> Não
+                </button>
+                <button class="btn btn-primary btn-flat border-0" type="submit"><i class="fa fa-check"></i> Sim,
+                    finalizar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

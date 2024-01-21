@@ -1,0 +1,58 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button>
+            <h4 class="modal-title">Assumir Tarefa</h4>
+        </div>
+        <form action="" method="post" id="formAssumirTarefa">
+            <input name="form" type="hidden" value="assumir-tarefa"/>
+            <input name="tarefa" type="hidden" value="[ID_TAREFA]"/>
+            <div class="modal-body">
+                <div class="txt-center" style="padding: 20px;">
+                    Tem certeza que deseja assumir a tarefa "<b>[NOME_TAREFA]</b>" do projeto "<b>[NOME_PROJETO]</b>"?
+                </div>
+            </div>
+            <div class="modal-footer clearfix">
+                <button class="btn btn-danger btn-flat border-0 pull-left" data-dismiss="modal" type="button"><i
+                        class="fa fa-times"></i> Não
+                </button>
+                <button class="btn btn-primary btn-flat border-0" type="submit"><i class="fa fa-check"></i> Sim, assumir
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    $("#formAssumirTarefa").submit(function(event){
+        event.preventDefault(); //prevent default action
+        var post_url = "http://localhost:/pop-v3/public_html/backoffice/pop/pop-minhas-tarefas-post.php";
+        var request_method = $(this).attr("method"); //get form GET/POST method
+        var form_data = new FormData(this); //Creates new FormData object
+        $.ajax({
+            url: post_url,
+            type: request_method,
+            data : form_data,
+            contentType: false,
+            cache: false,
+            processData:false,
+            success: function(data){
+                alert("Tarefa assumida com sucesso");
+                /*
+                //Aguardando alteração de layout para adicionar o reload aqui
+                swal({
+                    title: "Pedido Criado Com Sucesso",
+                    icon: 'success',
+                    text: response,
+                    timer: 2100,
+                    buttons: false
+                });
+
+                 */
+                $("#modal-tarefa").modal("toggle");
+            },
+            error: function (request, status, error) {
+                alert(request.responseText);
+            }
+        })
+    });
+</script>

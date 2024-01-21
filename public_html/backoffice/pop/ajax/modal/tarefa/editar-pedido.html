@@ -1,0 +1,62 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button>
+            <h4 class="modal-title">Editar Pedido [ID_PEDIDO] - "[PEDIDO_NOME]"</h4>
+        </div>
+        <form action="" method="post">
+            <input name="form" type="hidden" value="editar-pedido"/>
+            <input name="pedido" type="hidden" value="[ID_PEDIDO]"/>
+
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Pedido *</label>
+                    <input autocomplete="off" class="form-control" name="nome" placeholder="Pedido" required
+                           spellcheck="true" type="text" value="[PEDIDO_NOME]"/>
+                </div>
+                <div class="form-group">
+                    <label>Produto*</label>
+                    <input class="form-control" name="produto" placeholder="Produto" required spellcheck="true"
+                           type="text" value="[PEDIDO_PRODUTO]"/>
+                </div>
+
+                <input name="geraRetorno" type="hidden" value="1"/>
+                <div class="form-group">
+                    <label>Prazo</label>
+                    <input autocomplete="off" class="form-control datepicker" data-date-end-date="" data-date-format="yyyy-mm-dd"
+                           data-date-language="pt-BR" data-date-start-date="" data-provide="datepicker"
+                           name="prazo" required type="text" value="[PEDIDO_PRAZO]"/>
+                </div>
+                <div class="form-group custom-radio">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <label>Prioridade</label>
+                        </div>
+                        [PEDIDO_PRIORIDADE]
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Detalhe Seu Pedido</label>
+                    <textarea class="form-control trumbowyg" name="observacao" required style="height:120px;">[PEDIDO_DESCRICAO]</textarea>
+                </div>
+            </div>
+            <div class="modal-footer clearfix">
+                <button class="btn btn-danger btn-flat border-0 pull-left" data-dismiss="modal" type="button"><i
+                        class="fa fa-times"></i> Cancelar
+                </button>
+                <button class="btn btn-primary btn-flat border-0" type="submit"><i class="fa fa-save"></i> Salvar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $('.trumbowyg').trumbowyg();
+    $(document).ready(function () {
+        $("input[type='checkbox']:not(.simple), input[type='radio']:not(.simple)").iCheck({
+            checkboxClass: "icheckbox_minimal", radioClass: "iradio_minimal"
+        })
+    });
+</script>

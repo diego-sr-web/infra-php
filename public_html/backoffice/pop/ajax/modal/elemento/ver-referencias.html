@@ -1,0 +1,55 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button>
+            <h4 class="modal-title">Referências</h4>
+        </div>
+        <div class="modal-body box box-solid">
+            <div class="row">
+                [ELEMENTO_REFERENCIAS]
+            </div>
+            <div class="row" style="margin-top: 30px;">
+                <div class="col-sm-12">
+                    <h4>Adicionar mais referências</h4>
+                    <form action="" class="form-referencias" enctype="multipart/form-data" method="post">
+                        <input name="form" type="hidden" value="adicionar-referencias"/>
+                        <input name="elemento" type="hidden" value="[ELEMENTO_ID]">
+
+                        <div class="form-group">
+                            <label>Referências</label>
+                            <div class="input-group">
+								<span class="input-group-btn">
+									<span class="btn btn-primary btn-file btn-flat border-0">
+										Procurar&hellip; <input class="upload-preview" multiple name="arquivos[]"
+                                                                type="file">
+									</span>
+								</span>
+                                <input class="form-control" disabled="disabled" readonly="" type="text">
+                            </div>
+                            <p class="help-block">Max. 5MB</p>
+                            <!--<img class="img-preview" style="width:100%; display:none;" src="" />-->
+                        </div>
+                        <div id="msg-erro"></div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <button class="btn btn-primary btn-flat border-0 pull-right" type="submit">Enviar
+                                    referências
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        if (jQuery.fn.lightGallery) {
+            $('a.open-lightbox').lightGallery({
+                selector: 'this'
+            });
+        }
+    });
+</script>

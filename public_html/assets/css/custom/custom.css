@@ -1,0 +1,340 @@
+/*
+PLACE HERE YOUR OWN CSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
+WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.
+*/
+span.message-servidor {
+    color: red;
+    position: absolute;
+    bottom: 0px;
+    font-size: 22px;
+}
+.text-bold {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.text-green {
+    color: #00a65a !important;
+}
+.text-red {
+    color: #dd4b39 !important;
+}
+.label-static {
+    all: unset !important;
+    opacity: 0.7 !important;
+    line-height: 30px !important;
+}
+.container-form {
+    margin-top: 20px;
+}
+.modal-model {
+    max-height: 80%;
+}
+#modal-model2 {
+    width: 70%;
+}
+#modal-model3 {
+    width: 85%;
+}
+.btn-closed {
+    font-size: 60px;
+    cursor: pointer;
+}
+.text-area-simple {
+    padding: 5px;
+    resize: none;
+    border: 1px solid #9e9e9e;
+    height: 130px;
+    border-radius: 3px 3px 3px 3px;
+}
+.box-preview {
+    height: 100%;
+    width: 150px;
+    text-align: center;
+    overflow: hidden;
+    font-size: 13px;
+}
+#preview-img {
+    max-height: 80px;
+    max-width: 150px;
+}
+.box-input-preview {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    height: 105px;
+}
+.box-input {
+    width: 150px;
+    height: 30px;
+    font-size: 13px;
+    border-radius: 40px;
+    background-color: #ff5a92;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.22);
+}
+.datepicker-date-display {
+    display: none;
+}
+.datepicker-modal {
+    max-width: 420px !important;
+    top: 30% !important;
+}
+.modal-overlay {
+    height: 170%;
+}
+.tabs{
+    background-color: #1976d2;
+}
+.tabs .tab a{
+    color: #ffffff!important;
+}
+/* logo img login*/
+.logo-wrapper-login {
+    padding: 20px 0;
+    text-align: center;
+}
+/* Background img */
+.bg-login {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url('/backoffice/img/bg-nw-login.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+/* padding and margin custom */
+.pd-10 {
+    padding: 10px!important;
+}
+/* file custom */
+.file-custom {
+    line-height: 2rem!important;
+    height: 2rem!important;
+}
+[type='checkbox']:checked + span:not(.lever):before {
+    border-right: 2px solid #00aeef !important;
+    border-bottom: 2px solid #00aeef !important;
+}
+input:not([type]):focus:not([readonly]),
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=url]:not(.browser-default):focus:not([readonly]),
+input[type=time]:not(.browser-default):focus:not([readonly]),
+input[type=date]:not(.browser-default):focus:not([readonly]),
+input[type=datetime]:not(.browser-default):focus:not([readonly]),
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]),
+input[type=tel]:not(.browser-default):focus:not([readonly]),
+input[type=number]:not(.browser-default):focus:not([readonly]),
+input[type=search]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #00aeef!important;
+    box-shadow: 0 1px 0 0 #00aeef!important;
+}
+input:not([type]):focus:not([readonly]) + label,
+input[type=text]:not(.browser-default):focus:not([readonly]) + label,
+input[type=password]:not(.browser-default):focus:not([readonly]) + label,
+input[type=email]:not(.browser-default):focus:not([readonly]) + label,
+input[type=url]:not(.browser-default):focus:not([readonly]) + label,
+input[type=time]:not(.browser-default):focus:not([readonly]) + label,
+input[type=date]:not(.browser-default):focus:not([readonly]) + label,
+input[type=datetime]:not(.browser-default):focus:not([readonly]) + label,
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]) + label,
+input[type=tel]:not(.browser-default):focus:not([readonly]) + label,
+input[type=number]:not(.browser-default):focus:not([readonly]) + label,
+input[type=search]:not(.browser-default):focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label {
+    color: #00aeef!important;
+}
+.input-field .prefix.active {
+    color: #00aeef;
+}
+.navbar .notification-badge {
+    box-shadow: 0 0 10px 0 #b71c1c;
+}
+#main .section-data-tables .dataTables_wrapper .dataTables_paginate
+.paginate_button.current, #main .section-data-tables .dataTables_wrapper
+.dataTables_paginate .paginate_button.current:hover, #main .section-data-tables
+.dataTables_wrapper #page-length-option_paginate .paginate_button.current, #main
+.section-data-tables .dataTables_wrapper #page-length-option_paginate
+.paginate_button.current:hover {
+    border: 1px solid #1565c0 !important;
+    background: #1565c0 !important;
+    box-shadow: 0 0 8px 0 #1565c0 !important;
+}
+#main .section-data-tables .dataTables_wrapper .dataTables_paginate .paginate_button:hover,
+#main .section-data-tables .dataTables_wrapper #page-length-option_paginate .paginate_button:hover {
+    border: 1px solid #1565c0 !important;
+    background: #1565c0 !important;
+    box-shadow: 0 0 8px 0 #1565c0 !important;
+}
+.switch label input[type=checkbox]:checked + .lever {
+    background-color: #bbdefb  !important;
+}
+.switch label input[type=checkbox]:checked + .lever:after {
+    background-color: #00aeef !important;
+}
+input[type=checkbox]:checked:not(:disabled) ~ .lever:active::before, input[type=checkbox]:checked:not(:disabled).tabbed:focus ~ .lever::before {
+    background-color: rgba(0, 174, 239, .15)!important;
+}
+.switch label .lever:before {
+    background-color: rgba(0, 174, 239, .15)!important;
+}
+#main .section-data-tables .dataTables_wrapper table.dataTable tbody {
+    height: 100%!important;
+}
+@media only screen and (max-width: 768px){
+    .breadcrumbs{
+        display: none!important;
+    }
+    .w100 {
+        width: 100% !important;
+    }
+    .users-edit form button[type='submit'] {
+        margin-right: 0!important;
+    }
+    .mt-md-1 {
+        margin-top: 20px!important;
+    }
+}
+.tabs .tab a:hover, .tabs .tab a.active {
+    color: #000000!important;
+    background-color: #ffffff  !important;
+}
+.row .col .tabs .tab {
+    padding: 0 1px!important;
+}
+.tabs .indicator {
+    display: none!important;
+}
+.max-length {
+    max-width: 15ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-transform:capitalize;!important;
+}
+#main .section-data-tables .dataTables_wrapper table.dataTable thead th {
+    min-width: 40px!important;
+}
+#main .section-data-tables .dataTables_wrapper .dataTables_length, #main .section-data-tables .dataTables_wrapper .dataTables_filter {
+    display: block!important;
+}
+#main .section-data-tables .dataTables_wrapper table [type="checkbox"] + span:not(.lever)::before,
+#main .section-data-tables .dataTables_wrapper table [type="checkbox"]:not(.filled-in) + span:not(.lever)::after {
+    border-radius: 0 !important;
+}
+
+#main .section-data-tables .dataTables_wrapper table [type="checkbox"] + span:not(.lever)::before,
+#main .section-data-tables .dataTables_wrapper table [type="checkbox"]:not(.filled-in) + span:not(.lever)::after {
+    border-radius: 0 !important;
+}
+[type="checkbox"] + span:not(.lever)::before, [type="checkbox"]:not(.filled-in) + span:not(.lever)::after {
+    border-radius: 0 !important;
+}
+
+.bullet {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: .2rem;
+    border-radius: 50%;
+}
+.lh {
+    line-height: 0!important;
+}
+select {
+    border: 1px solid #bdbdbd!important;
+}
+.mh-0 {
+    min-height: auto!important;
+}
+select.browser-default {
+    height: 38px;
+}
+.bg-t {
+    background-color: transparent!important;
+}
+.collection {
+    border: 0!important;
+}
+.row .col {
+    padding: 0 .75rem!important;
+}
+.chip {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 30px;
+    display: inline-block;
+    height: 30px;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding: 0 12px;
+    color: #FFFFFF;
+    border-radius: 15px;
+    background-color: transparent;
+}
+
+
+/* XUNXO DATATABLES */
+/* XUNXO DATATABLES */
+/* XUNXO DATATABLES */
+
+#main .section-data-tables .dataTables_wrapper .dataTables_length,
+#main .section-data-tables .dataTables_wrapper .dataTables_filter
+{
+    display: block;
+}
+
+#main .section-data-tables .dataTables_wrapper .dataTables_length label select,
+#main .section-data-tables .dataTables_wrapper .dataTables_filter label select
+{
+    display: inline-block;
+
+    width: auto;
+    height: auto;
+}
+
+#main .section-data-tables .dataTables_wrapper .dataTables_length label input,
+#main .section-data-tables .dataTables_wrapper .dataTables_filter label input
+{
+    width: auto;
+    height: auto;
+}
+
+#main .section-data-tables .dataTables_wrapper
+{
+    margin-right: .35rem;
+    margin-bottom: .75rem;
+}
+
+#main .section-data-tables .dataTables_wrapper .paginate_button
+{
+    margin-top: .25rem;
+    padding: .25em .65em;
+}
+
+#main .section-data-tables .dataTables_wrapper .paginate_button.current,
+#main .section-data-tables .dataTables_wrapper .paginate_button.current:hover
+{
+    color: #fff !important;
+    border: 1px solid #3f51b5;
+    border-radius: 6px;
+    background: #3f51b5;
+    box-shadow: 0 0 8px 0 #3f51b5;
+}
+
+#main .section-data-tables .dataTables_wrapper .paginate_button:hover
+{
+    color: #fff !important;
+    border: 1px solid #3f51b5;
+    border-radius: 6px;
+    background: #3f51b5;
+    box-shadow: 0 0 8px 0 #3f51b5;
+}

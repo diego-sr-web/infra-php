@@ -1,0 +1,364 @@
+.bg-aprovado, .bg-aprovado:hover {
+    background-color: #488DD8;
+    color: #FFFFFF;
+}
+
+.bg-reprovado, .bg-reprovado:hover {
+    background-color: #D9534F;
+    color: #FFFFFF;
+}
+
+.bg-aguardando, .bg-aguardando:hover {
+    background-color: #E1E1E1;
+    color: #FFFFFF;
+}
+
+.aprov-proj {
+    cursor: default;
+    padding: 6px 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.aprov-proj i {
+    font-size: 18px;
+}
+
+#header-filtro {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+    padding: 10px 15px 0px 20px;
+}
+
+#header-filtro .form-group {
+    margin-bottom: 10px;
+}
+
+.label-filtro {
+    margin-right: 15px;
+}
+
+.box.box-novo {
+    height: 400px;
+    padding-top: 170px;
+    border-top: 0 none;
+    border: 2px dashed #CCCCCC;
+    cursor: pointer;
+    font-size: 25px;
+    text-align: center;
+    color: #969696;
+    background: none;
+    box-shadow: none;
+}
+
+.categ-cliente {
+    color: #bebebe;
+}
+
+.projeto-titulo {
+    font-size: 20px;
+    margin: 10px 0 5px 0;
+}
+
+.projeto-img {
+    margin: 0 0 10px 0;
+}
+
+.projeto-img img {
+    width: 100%;
+}
+
+.projeto-descricao {
+    width: 100%;
+    clear: both;
+}
+
+.botoes-projeto-wrapper {
+    margin: 10px 0 0 0;
+}
+
+.botoes-projeto-wrapper .btn-app {
+    min-width: 83px;
+}
+
+.message .name {
+    color: #3c8dbc;
+}
+
+.proj-item .data-criacao {
+    clear: both;
+    margin: 0 10px 0 0;
+}
+
+.projeto-datas p {
+    font-size: 12px;
+    margin: 0;
+}
+
+.form-group .textarea-view {
+    background-color: #eeeeee;
+    border: 1px solid #cccccc;
+    width: 100%;
+    padding: 6px 12px;
+}
+
+.form-group .briefing-view {
+    /*background-color: #F0F0F0;*/
+    width: 100%;
+    padding: 6px 12px;
+}
+
+.btn-dropdown {
+    border: 0;
+}
+
+.dropdown-menu-custom {
+    border-radius: 0;
+    border-top: 4px solid #CCCCCC;
+}
+
+.dropdown-menu-custom li a {
+    color: #777;
+    line-height: 2;
+}
+
+.modal-dialog-custom {
+    width: 750px;
+}
+
+.item-acoes {
+    font-size: 12px;
+}
+
+.modal.modal-over {
+    z-index: 1060;
+}
+
+.itemprojeto-acoes {
+    margin: -30px 30px 0 0;
+}
+
+.box.box-comentarios {
+    background: none repeat scroll 0 0 #ffffff;
+    border-radius: 0;
+    border: 0;
+    box-shadow: none;
+    margin: 0;
+}
+
+.box.box-comentarios .chat {
+    padding: 0;
+}
+
+@media screen and (max-width: 992px) {
+    .modal-dialog-custom {
+        width: auto;
+    }
+}
+
+.mt-0 {
+    margin-top: 0;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.pl-0 {
+    padding-left: 0;
+}
+
+.pr-0 {
+    padding-right: 0;
+}
+
+.pl-5 {
+    padding-left: 5px;
+}
+
+.pr-5 {
+    padding-right: 5px;
+}
+
+.border-0 {
+    border: 0;
+}
+
+.navbar-nav > li > a {
+    padding-bottom: 10px;
+    padding-top: 16px;
+}
+
+.notifications-menu .menu li {
+    clear: both;
+}
+
+.notifications-menu .menu li a p {
+    margin: 0;
+    width: 250px;
+    padding: 5px 0 0 5px;
+}
+
+.notifications-menu .menu li small {
+    text-align: center;
+    width: 50px;
+    padding: 10px 0;
+}
+
+.notifications-menu .menu li.nao-lida a {
+    background-color: #f5f5f5;
+}
+
+.label-notificacao {
+    background-color: #FF0004;
+}
+
+/* Para alterar cor do background dos ícones de notificação */
+.navbar-nav > .notifications-menu > .dropdown-menu > li .menu > li > a > .fa.notificacao,
+.navbar-nav > .notifications-menu > .dropdown-menu > li .menu > li > a > div > .fa.notificacao {
+    background-color: #efe257;
+}
+
+.navbar-nav > .notifications-menu > .dropdown-menu > li .menu > li > a > .fa.cor-comentario,
+.navbar-nav > .notifications-menu > .dropdown-menu > li .menu > li > a > div > .fa.cor-comentario {
+    background-color: #55e4e5;
+}
+
+.icon-notificacao i.cor-comentario {
+    color: #55e4e5;
+}
+
+.navbar-nav > .notifications-menu > .dropdown-menu > li .menu > li > a > .fa.cor-lembrete,
+.navbar-nav > .notifications-menu > .dropdown-menu > li .menu > li > a > div > .fa.cor-lembrete {
+    background-color: #ffcc00;
+}
+
+.icon-notificacao i.cor-lembrete {
+    color: #ffcc00;
+}
+
+.navbar-nav > .notifications-menu > .dropdown-menu > li .menu > li > a > .fa.cor-aprovado,
+.navbar-nav > .notifications-menu > .dropdown-menu > li .menu > li > a > div > .fa.cor-aprovado {
+    background-color: #488DD8;
+}
+
+.icon-notificacao i.cor-aprovado {
+    color: #488DD8;
+}
+
+.navbar-nav > .notifications-menu > .dropdown-menu > li .menu > li > a > .fa.cor-reprovado,
+.navbar-nav > .notifications-menu > .dropdown-menu > li .menu > li > a > div > .fa.cor-reprovado {
+    background-color: #D9534F;
+}
+
+.icon-notificacao i.cor-reprovado {
+    color: #D9534F;
+}
+
+
+.box.box-notif-projetos,
+.box.box-notif-atualizacoes,
+.box.box-notif-lembretes,
+.box.box-notif-comentarios {
+    border-top-color: #666666;
+}
+
+.box.box-solid.box-notif-projetos > .box-header,
+.box.box-solid.box-notif-atualizacoes > .box-header,
+.box.box-solid.box-notif-lembretes > .box-header,
+.box.box-solid.box-notif-comentarios > .box-header {
+    color: #fff;
+    background: #666666;
+    background-color: #666666;
+}
+
+.box.box-solid.box-notif-projetos > .box-header a,
+.box.box-solid.box-notif-atualizacoes > .box-header a,
+.box.box-solid.box-notif-lembretes > .box-header a,
+.box.box-solid.box-notif-comentarios > .box-header a {
+    color: #444;
+}
+
+
+.box .todo-list.lista-notificacoes > li {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    padding: 10px 10px 10px 5px;
+    background: #ffffff;
+    margin-bottom: 2px;
+    border-left: 2px solid #e6e7e8;
+    color: #444;
+    min-height: 50px;
+}
+
+.box .todo-list.lista-notificacoes .icon-notificacao {
+    font-size: 20px;
+    padding: 0 0 0 2px;
+    width: 25px;
+}
+
+.box .todo-list.lista-notificacoes li a span.text {
+    width: 80%;
+}
+
+.box .todo-list.lista-notificacoes li small {
+    text-align: center;
+    font-size: 78%;
+    width: 40px;
+}
+
+.box .todo-list.lista-notificacoes > li.nao-lida {
+    background: #F3F4F5;
+}
+
+.box-footer .pagination {
+    border-radius: 0;
+    margin: 0;
+}
+
+.box-footer .pagination li a.ativo {
+    background-color: #eee;
+    font-weight: bold;
+}
+
+.navbar-nav > .notifications-menu > .dropdown-menu > li .menu li a,
+.navbar-nav > .messages-menu > .dropdown-menu > li .menu li a .navbar-nav > .tasks-menu > .dropdown-menu > li .menu li a {
+    min-height: 51px;
+}
+
+.navbar-nav > .notifications-menu > .dropdown-menu > li .menu > li > a > .glyphicon,
+.navbar-nav > .notifications-menu > .dropdown-menu > li .menu > li > a > .fa,
+.navbar-nav > .notifications-menu > .dropdown-menu > li .menu > li > a > .ion .navbar-nav > .notifications-menu > .dropdown-menu > li .menu > li > a > div > .glyphicon,
+.navbar-nav > .notifications-menu > .dropdown-menu > li .menu > li > a > div > .fa,
+.navbar-nav > .notifications-menu > .dropdown-menu > li .menu > li > a > div > .ion {
+    padding: 15px 0;
+}
+
+.proj-item .box .badge, .projeto-img .badge {
+    border-radius: 0;
+    font-weight: 500;
+    padding: 5px 15px;
+    position: absolute;
+}
+
+.projeto-img .badge {
+    font-size: 15px;
+    padding: 7px 30px;
+}
+
+.bg-proj-novo {
+    background-color: #CDE4F3;
+}
+
+.bg-proj-emandamento {
+    background-color: #53a4d3;
+}
+
+.bg-proj-feedback {
+    background-color: #cdc035;
+}
+
+.bg-proj-finalizado {
+    background-color: #00A65A;
+}

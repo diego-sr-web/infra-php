@@ -1,0 +1,38 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button>
+            <h4 class="modal-title">Editar projeto - [PROJETO_NOME]</h4>
+        </div>
+        <form action="" method="post">
+            <input name="form" type="hidden" value="editar-projeto"/>
+            <input name="projeto" type="hidden" value="[PROJETO_ID]"/>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Nome do Projeto</label>
+                    <input autocomplete="off" class="form-control" name="nome" spellcheck="true" type="text"
+                           value="[PROJETO_NOME]"/>
+                </div>
+                <div class="form-group">
+                    <label>Data de Entrada do Projeto</label>
+                    <input autocomplete="off" class="form-control datepicker" data-date-format="yyyy-mm-dd" data-date-language="pt-BR"
+                           data-provide="datepicker" name="dataEntrada" type="text"
+                           value="[PROJETO_DATAENTRADA]"/>
+                </div>
+                <div class="form-group">
+                    <label>Prazo Final de Entrega</label>
+                    <input autocomplete="off" class="form-control datepicker" data-date-format="yyyy-mm-dd" data-date-language="pt-BR"
+                           data-provide="datepicker" name="prazo" type="text"
+                           value="[PROJETO_PRAZO]"/>
+                </div>
+            </div>
+            <div class="modal-footer clearfix">
+                <button class="btn btn-danger btn-flat border-0 pull-left" data-dismiss="modal" type="button"><i
+                        class="fa fa-times"></i> Cancelar
+                </button>
+                <button class="btn btn-primary btn-flat border-0" type="submit"><i class="fa fa-save"></i> Salvar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

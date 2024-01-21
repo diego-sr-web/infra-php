@@ -1,0 +1,26 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button>
+            <h4 class="modal-title">Remover Responsável das Tarefas</h4>
+        </div>
+        <form action="" method="post">
+            <input name="form" type="hidden" value="remover-tarefas"/>
+            <input name="tarefas" type="hidden" value="[LISTA_ID_TAREFAS]"/>
+
+            <div class="modal-body">
+                <div class="txt-center" style="padding: 20px;">
+                    <p>Tem certeza que deseja remover o responsável das seguintes tarefas?</p>
+                    <p><b>[TXT_TAREFAS]</b></p>
+                </div>
+            </div>
+            <div class="modal-footer clearfix">
+                <button class="btn btn-danger btn-flat border-0 pull-left" data-dismiss="modal" type="button"><i
+                        class="fa fa-times"></i> Não
+                </button>
+                <button class="btn btn-primary btn-flat border-0" type="submit"><i class="fa fa-check"></i> Sim, remover
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

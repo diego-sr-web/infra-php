@@ -1,0 +1,100 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button>
+            <h4 class="modal-title">Criar projeto</h4>
+        </div>
+        <form action="" method="post" id="formNovoProjeto">
+            <input name="form" type="hidden" value="novo-projeto"/>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Nome do Projeto*</label>
+                    <input autocomplete="off" class="form-control" name="nome" placeholder="Nome do Projeto" required
+                           spellcheck="true" type="text"/>
+                </div>
+                <div class="form-group custom-radio">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <label>Tipo de Projeto</label>
+                        </div>
+                        [TIPO_PROJETO]
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Cliente*</label>
+                    <select class="form-control" name="cliente" required>
+                        <option value="">-- Selecione o Cliente --</option>
+                        [CLIENTE_PROJETO]
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Data de Entrada do Projeto</label>
+                    <input autocomplete="off" class="form-control datepicker" data-date-format="dd/mm/yyyy" data-date-language="pt-BR" data-provide="datepicker"
+                           name="dataEntrada" required type="text"
+                           value="[DATA_ATUAL]"/>
+                </div>
+                <div class="form-group">
+                    <label>Prazo Final de Entrega</label>
+                    <input autocomplete="off" class="form-control datepicker" data-date-end-date="" data-date-format="dd/mm/yyyy" data-date-language="pt-BR"
+                           data-date-start-date="0days" data-date-today-highlight="true" data-provide="datepicker"
+                           name="prazo" required type="text"/>
+                </div>
+                <div class="campos-extra"></div>
+            </div>
+            <div class="modal-footer clearfix">
+                <button class="btn btn-danger btn-flat border-0 pull-left" data-dismiss="modal" type="button"><i
+                        class="fa fa-times"></i> Cancelar
+                </button>
+                <button class="btn btn-primary btn-flat border-0" type="submit"><i class="fa fa-save"></i> Salvar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $("input[type='checkbox']:not(.simple), input[type='radio']:not(.simple)").iCheck({
+        checkboxClass: "icheckbox_minimal", radioClass: "iradio_minimal"
+    });
+
+    $("#formNovoProjeto").submit(function(event){
+        event.preventDefault(); //prevent default action
+        var post_url = "http://localhost:/pop-v3/public_html/backoffice/pop/pop-projetos-post.php";
+        var request_method = $(this).attr("method"); //get form GET/POST method
+        var form_data = new FormData(this); //Creates new FormData object
+        $.ajax({
+            url: post_url,
+            type: request_method,
+            data : form_data,
+            contentType: false,
+            cache: false,
+            processData:false,
+            success: function(data){
+                if(data == 1){
+                    alert("Projeto criado com sucesso");
+                    //Aqui faz o reload da página que contém a tabela da lista EM ESPERA do pop-minhas-tarefas
+                    $( "#tabela-em-espera" ).load( "pop-minhas-tarefas.php #tabela-em-espera" );
+                }else if(data == 2){
+                    alert("Houve algum erro ao inserir o projeto.");
+                }else if(data == 3){
+                    alert("Preencha todos os campos obrigatórios");
+                }
+                /*
+                Utilizar este aqui em todos os retornos, comentado pois o css e js não carrega no layout antigo.
+                swal({
+                    title: "Pedido Criado Com Sucesso",
+                    icon: 'success',
+                    text: response,
+                    timer: 2100,
+                    buttons: false
+                });
+
+                 */
+                $("#modal-projeto").modal("toggle");
+            },
+            error: function (request, status, error) {
+                alert(request.responseText);
+            }
+        })
+    });
+</script>

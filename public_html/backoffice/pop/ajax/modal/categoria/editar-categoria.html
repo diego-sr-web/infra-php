@@ -1,0 +1,42 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button>
+            <h4 class="modal-title">Editar Categoria</h4>
+        </div>
+        <form action="" method="post">
+            <input name="form" type="hidden" value="editar-categoria"/>
+            <input name="categoria" type="hidden" value="[CATEGORIA_ID]"/>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Nome da Categoria*</label>
+                    <input class="form-control" name="nome" spellcheck="true" type="text" value="[CATEGORIA_NOME]"/>
+                </div>
+                <div class="form-group">
+                    <label>Descrição da Categoria*</label>
+                    <textarea class="form-control" name="descricao" spellcheck="true">[CATEGORIA_DESCRICAO]</textarea>
+                </div>
+                <div class="form-group">
+                    <label>Cor</label>
+                    <div class="input-group demo2">
+                        <input class="form-control" name="cor" type="text" value="[CATEGORIA_COR]"/>
+                        <span class="input-group-addon"><i></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer clearfix">
+                <button class="btn btn-danger btn-flat border-0 pull-left" data-dismiss="modal" type="button"><i
+                        class="fa fa-times"></i> Cancelar
+                </button>
+                <button class="btn btn-primary btn-flat border-0" type="submit"><i class="fa fa-save"></i> Salvar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $('.demo2').colorpicker();
+    });
+</script>

@@ -1,0 +1,25 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button>
+            <h4 class="modal-title">Apagar Item</h4>
+        </div>
+        <form action="" enctype="multipart/form-data" method="post">
+            <input name="form" type="hidden" value="apagar-elemento"/>
+            <input name="elemento" type="hidden" value="[ID_TAREFA]"/>
+
+            <div class="modal-body">
+                <div class="txt-center" style="padding: 20px;">
+                    Tem certeza que deseja <b>APAGAR</b> o PEDIDO numero [ID_TAREFA]?
+                </div>
+            </div>
+            <div class="modal-footer clearfix">
+                <button class="btn btn-danger btn-flat border-0 pull-left" data-dismiss="modal" type="button"><i
+                        class="fa fa-times"></i> Cancelar
+                </button>
+                <button class="btn btn-primary btn-flat border-0" type="submit"><i class="fa fa-save"></i> Sim, apagar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
